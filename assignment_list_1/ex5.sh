@@ -1,4 +1,4 @@
-dir=$1
+dir="./a"
 all_files=$( ./ex1.sh $dir )
 #For every file
 for file in $all_files; do
