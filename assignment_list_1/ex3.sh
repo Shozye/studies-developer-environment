@@ -21,5 +21,5 @@ for file in $(./ex1.sh); do
 done
 
 for key in "${!freq[@]}"; do 
-    echo "$key: ${freq[$key]}"; 
+    echo "$key :${freq[$key]}"; 
 done
