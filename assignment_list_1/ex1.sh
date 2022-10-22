@@ -1,3 +1,3 @@
 #/bin/bash
-
-find a -type f
+dir=$1
+find $dir -type f

@@ -7,8 +7,8 @@
 # dict in Python or unordered_map in c++
 # Knowledge needed: https://linuxhint.com/associative_arrays_bash_examples/
 declare -A freq
-
-for file in $(./ex1.sh); do
+dir=$1
+for file in $(./ex1.sh $dir ); do
     for word in $( cat $file ); do
         # checks if word is in freq map (chapter 5 in website)
         if [ $freq[$word]+_ ]; then 

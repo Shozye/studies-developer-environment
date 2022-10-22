@@ -1,9 +1,6 @@
 # Mateusz Pełechaty 261737
-
-declare -A files_per_word
-declare -A lines_per_word
-
-all_words=$( ./ex3.sh )
+dir=$1
+all_words=$( ./ex3.sh $dir )
 for word in $all_words; do
     # i am doing here what's known as SUBSTRING EXTRACTION
     # https://tldp.org/LDP/abs/html/string-manipulation.html
@@ -12,7 +9,7 @@ for word in $all_words; do
     if [ ${word:0:1} != ":" ]; then
         echo $word
         # r is recursive over directory, n is print line, E is extended regex
-        grep -rnE '(^| )'$word'($| )' ./a
+        grep -rnE '(^| )'$word'($| )' $dir
         
     fi
 done;
