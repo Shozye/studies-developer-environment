@@ -9,7 +9,7 @@
 declare -A freq
 dir=$1
 for file in $(./ex1.sh $dir ); do
-    for word in $( cat $file | tr " " "\n" | uniq ); do
+    for word in $( cat $file | tr " " "\n" | sort | uniq ); do
         # checks if word is in freq map (chapter 5 in website)
         if [ $freq[$word]+_ ]; then 
             # https://stackoverflow.com/questions/8195583/how-can-i-increment-a-value-in-a-bash-script-array-by-1
